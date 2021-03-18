@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Literals</title>
+	<script type="text/javascript">
+		
+		var fun = function(x,y) {
+			return x * y;
+		}
+
+		function secondFunction(){
+			console.log(fun);
+			console.log(secondFunction);
+
+			var result = fun(10,20);
+			document.write (result);
+		}
+
+	</script>
+</head>
+<body>
+	<p>Click the button below</p>
+
+	<form>
+		<input type="button" onclick="secondFunction()" 
+		 	value="call function">
+	</form>
+</body>
+</html>

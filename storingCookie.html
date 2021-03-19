@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookies</title>
+	<script>
+
+		function writeCookie() {
+			if (document.myForm.customer.value ==  "") {
+				alert ("Name can not be empty");
+				return;
+			}
+			cookievalue = escape(document.myForm.customer.value) + ";"
+			document.cookie = "name=" + cookievalue + "secure";
+			document.write ("Setting the cookies: " + "name = " + cookievalue);
+		}
+
+		function readCookie(){
+			var allcookies = document.cookie;
+			document.write("All Cookies: " + allcookies);
+	
+
+			cookiearray = allcookies.split(';')
+			console.log(cookiearray);
+	
+			}
+
+		
+	</script>
+</head>
+<body>
+	<form name="myForm" action="">
+		Single Input Cookie: 
+		<input type="text" name="customer" />
+		<input type="button" value="Set Cookie" onclick="writeCookie()">
+
+		<br />
+		<br />
+
+		<input type="button" value="Click here to read the cookie: " 
+		onclick="readCookie()" />
+	</form>
+
+	
+</body>
+</html>

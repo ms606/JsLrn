@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Type</title>
+	<script type="text/javascript">
+		function sayHello(){
+			console.log("say Hello");
+		}
+
+		function over(){
+			document.write("Mouse over");
+		}
+
+		function prev(){
+			document.write("Mouse left");
+		}
+
+		function wheeling(){
+			document.write("You are wheeling");
+			console.log("You are wheeling");
+		}
+
+	</script>
+</head>
+<body>
+
+<p>Click the button below</p>
+
+<form>
+  <input type="button" onclick="sayHello()" value="Say Hello"/>
+</form>
+
+	<div onmouseover="over()" onmousemove="prev()" >
+		<h2>Hover the mouse here</h2>		
+	</div>
+
+	<br />	
+		  
+    <div  ondblclick="wheeling()">
+    	<h1>Do the mouse wheeling </h1>
+    </div>
+
+</body>
+</html>

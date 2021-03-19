@@ -19,9 +19,17 @@
 			document.write("All Cookies: " + allcookies);
 	
 
-			cookiearray = allcookies.split(';')
+			var cookiearray = new Array();
+
+			cookiearray = allcookies.split(';');
 			console.log(cookiearray);
 	
+
+
+			for (var i=0; i<cookiearray.length; i++){
+				name = cookiearray[i].split('=')[0];
+				value = cookiearray[i].split('=')[1];
+				document.write("Key is: " + name + "and Value is :" + value);
 			}
 
 		

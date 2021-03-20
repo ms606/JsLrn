@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Redirect</title>
+
+	<script type="text/javascript">
+		function Redirect(){
+			window.location = "https://www.instagram.com/heroesforsale/";
+		}
+
+		function RedirectTimeDelay(){
+			window.location = "https://www.instagram.com/mufaddal_ms"
+			document.write ("You will be directed in 3 seconds");
+			setTimeout ('RedirectTimeDelay()', 3000);
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="button" value="Redirect to heroes for sale IG" onclick="Redirect()" />
+	
+	<br />
+	<br />
+	<br />
+
+
+	<input type="button" value = "Redirect with time delay to my IG" onclick="RedirectTimeDelay()" >
+</body>
+</html>

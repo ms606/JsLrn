@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirmation Dialog </title>
+	<script type="text/javascript">
+		function getConfiramtion(){
+			var retVal = confirm("Do you want to contiue");
+
+
+			if (retVal == true) {
+				document.write ("User selected yes.")
+			} else if (retVal == false) {
+				document.write ("User selected cancel.")
+			} 
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="Click me" onclick="getConfiramtion()">
+</body>
+</html>

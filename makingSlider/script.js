@@ -2,17 +2,45 @@
 //bring in slides
 //bring in buttons 
 
-let dom = document.getElementsByClassName('slider-container')
-let arrowRight = document.getElementsByClassName('arrow right-arrow')
-let arrowLeft = document.getElementsByClassName('arrow left-arrow')
+let dom         = document.getElementsByClassName('slider-container')
+let arrowRight  = document.getElementById('right-arrow')
+let arrowLeft   = document.getElementById('left-arrow')
+let slide       = document.querySelectorAll('.slide')
 
-let slide = document.getElementsByClassName('slide')
 console.log(slide)
 
-let count = 0
+let count = slide.length
+
+console.log(count)
+
+arrowLeft.addEventListener("click", function(){
+        count--
+        console.log(count)
+
+        if (count < 1) {
+            count = slide.length
+        }
+
+        updatePicture()        
+    }  
+)
+
+arrowRight.addEventListener("click", function(){
+    count++
+    console.log(count)
+
+    if (count > slide.length) {
+        count = 0
+    }
+    updatePicture()
+})
 
 
-arrowRight.addEventListner("click", count ++ )
+function updatePicture() {
+    slide.forEach((slide) => slide.classList.remove("active"))
+
+    slide[count].classList.add("active")
+}
 
 
 

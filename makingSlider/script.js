@@ -7,9 +7,7 @@ let arrowRight  = document.getElementById('right-arrow')
 let arrowLeft   = document.getElementById('left-arrow')
 let slide       = document.querySelectorAll('.slide')
 
-console.log(slide)
-
-let count = slide.length
+let count = slide.length 
 
 console.log(count)
 
@@ -17,9 +15,10 @@ arrowLeft.addEventListener("click", function(){
         count--
         console.log(count)
 
-        if (count < 1) {
-            count = slide.length
+        if (count < 0) {
+            count = slide.length -1
         }
+        console.log(slide)
 
         updatePicture()        
     }  
@@ -28,10 +27,13 @@ arrowLeft.addEventListener("click", function(){
 arrowRight.addEventListener("click", function(){
     count++
     console.log(count)
+    
 
-    if (count > slide.length) {
+    if (count >= slide.length) {
         count = 0
     }
+    console.log(slide)
+
     updatePicture()
 })
 

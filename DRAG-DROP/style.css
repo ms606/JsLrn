@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.empty {
+    width: 150px;
+    height: 150px;
+    border: solid 3px black;
+    background-color: white;
+    margin: 10px;    
+    justify-content: center;    
+}
+
+.fill {
+    background-image: url('https://themommadiaries.com/wp-content/uploads/2021/07/Main_Artwork_Vertical_Pre-1638x2048.jpg');    
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.hover {
+    box-shadow: 10px -5px plum;
+    border-style: dashed;
+}
+
+.hold {
+    border: solid 5px #ccc
+}

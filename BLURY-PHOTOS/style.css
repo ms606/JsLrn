@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    background-image: url('https://www.themoviedb.org/t/p/original/m1nuMHBCiNy6pMGzRAdH5frNesN.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+
+    /* -webkit-filter: blur(5px); */
+    /* filter: blur(5px); */
+}
+
+
+.loading-text {
+    position: absolute;
+    font-size: 150px;
+}
